@@ -1,0 +1,17 @@
+<div>
+  <ul>
+    <li *ngFor="let story of stories;">
+      <a routerLink="/story/{{ story._id }}">{{ story.title }} - {{ story.container.name }} - {{ story.topic.name }}</a>
+    </li>
+  </ul>
+</div>
+
+<div *ngIf="stories && stories.length > 0">
+  <button (click)="goPrev()"
+    [disabled]="offset === 0">
+    Prev
+  </button>
+  <button (click)="goNext()">
+    Next
+  </button>
+</div>

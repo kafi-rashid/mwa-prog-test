@@ -1,0 +1,45 @@
+<p class="title">
+  {{ story.title }}
+</p>
+<br/>
+<table>
+  <tr>
+    <td>Title</td>
+    <td>: {{ story.title }}</td>
+  </tr>
+  <tr>
+    <td>Container</td>
+    <td>: {{ story.container.name }}</td>
+  </tr>
+  <tr>
+    <td>Topic</td>
+    <td>: {{ story.topic.name }}</td>
+  </tr>
+  <tr>
+    <td>Media</td>
+    <td>: {{ story.media }}</td>
+  </tr>
+  <tr>
+    <td>Number of Comments</td>
+    <td>: {{ story.comments }}</td>
+  </tr>
+  <tr>
+    <td>Description</td>
+    <td>: {{ story.description }}</td>
+  </tr>
+  <tr>
+    <td>Status</td>
+    <td>: {{ story.status }}</td>
+  </tr>
+  <tr>
+    <td>User</td>
+    <td>: {{ story.user.name }}</td>
+  </tr>
+</table>
+<br/>
+<button routerLink="/stories">
+  < Go Back
+</button>
+<button (click)="updatePopularity(story._id)">
+  Change Popularity
+</button>

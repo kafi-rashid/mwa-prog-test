@@ -1,0 +1,10 @@
+<H1>Station: {{station.st}}<br/></H1>
+<br/>
+
+Time: {{station.ts | date: displayTime ? "MMM d, YYYY, H:mm:ss a" : "MMM d, YYYY"}} <input type="checkbox" (change)="toggleDisplayTime()"> display time<br/>
+Latitude: {{station.position.coordinates[1]}} Longitude: {{station.position.coordinates[0]}}<br/>
+Air Temperature: {{station.airTemperature}}<br/>
+Dew Point: {{station.dewPoint}}<br/>
+Pressure: {{station.pressure}}<br/>
+Wind Direction: {{station.wind.direction}}<br/>
+Wind Speed: {{station.wind.speed}}<br/>

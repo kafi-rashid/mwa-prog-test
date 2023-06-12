@@ -1,0 +1,23 @@
+The list of Stations are:<br/>
+<ul>
+    <div *ngFor="let station of stations">
+        <input type="checkbox"
+            (change)="stationSelected($event, station._id)">
+        <a routerLink="{{station._id}}"> {{station.st}}</a>
+    </div>
+</ul>
+
+<button (click)="deleteSelected()">
+    Delete Seleted
+</button>
+
+<div>
+    <button (click)="previous()"
+        [disabled]="offset === 0">
+        Previous
+    </button>
+    <button (click)="next()"
+        [disabled]="isNextDisabled()">
+        Next
+    </button>
+</div>

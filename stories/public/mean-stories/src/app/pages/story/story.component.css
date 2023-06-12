@@ -1,0 +1,21 @@
+table {
+  width: 100%;
+  max-width: 600px;
+}
+
+table td {
+  padding-right: 30px;
+  vertical-align: top;
+}
+
+button {
+  padding: 8px 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgb(220, 214, 58);
+  margin-right: 10px;
+}
+
+button:first-of-type {
+  background-color: rgb(137, 218, 255);
+}
